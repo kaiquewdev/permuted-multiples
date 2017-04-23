@@ -16,4 +16,14 @@ class PermutedMultiplesSpec extends FlatSpec with Matchers {
   "The permuted multiples class" should "have an setter for x" in {
     permutedMultiples.setX(15) shouldEqual 15
   }
+
+  "The permuted multiples class" should "have an getter for x" in {
+    permutedMultiples.getX() shouldEqual 15
+  }
+
+  "The permuted multiples class" should "have a conjunction by method" in {
+    a [InitialMultiplicationException] should be thrownBy {
+      permutedMultiples.by(1)
+    }
+  }
 }
