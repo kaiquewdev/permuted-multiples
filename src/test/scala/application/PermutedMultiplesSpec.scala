@@ -39,5 +39,6 @@ class PermutedMultiplesSpec extends FlatSpec with Matchers {
 
   "The permuted multiples class" should "have a digit occurrences" in {
     permutedMultiples.digitOccurrences("7","1234789732985") shouldEqual 2
+    permutedMultiples.digitOccurrences("3","1234789732985") shouldEqual 2
   } 
 }
