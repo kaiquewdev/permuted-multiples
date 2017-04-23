@@ -1,8 +1,19 @@
 package application
 
 class InitialMultiplicationException extends Exception {}
+class GreaterThanSixMultiplicationException extends Exception {}
 
-class PermutedMultiples extends Object with PermutedMultiplesDefinition {}
+class PermutedMultiples extends Object with PermutedMultiplesDefinition {
+  def digitOccurrences(dgt: String, dgtSeq: String): Int = {
+    var occurrs: Int = 0
+    for (i <- (0 to dgtSeq.length - 1)) {
+      if (dgtSeq(i).toString() == dgt) {
+        occurrs += 1
+      }
+    }
+    occurrs
+  }
+}
 
 trait PermutedMultiplesDefinition {
   var x: Int = 10
@@ -14,8 +25,10 @@ trait PermutedMultiplesDefinition {
   def by(t: Int): Int = {
     if (t == 1) {
       throw new InitialMultiplicationException()
+    } else if (t > 6) {
+      throw new GreaterThanSixMultiplicationException()
     } else {
-      x
+      x * t
     }
   }
 }

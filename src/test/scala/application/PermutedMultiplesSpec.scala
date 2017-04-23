@@ -21,9 +21,23 @@ class PermutedMultiplesSpec extends FlatSpec with Matchers {
     permutedMultiples.getX() shouldEqual 15
   }
 
-  "The permuted multiples class" should "have a conjunction by method" in {
+  "The permuted multiples class" should "thrown a multiplication exception for initial value" in {
     a [InitialMultiplicationException] should be thrownBy {
       permutedMultiples.by(1)
     }
   }
+
+  "The permuted multiples class" should "have a multiplication by two" in {
+    permutedMultiples.by(2) shouldEqual 30
+  } 
+
+  "The permuted multiples class" should "have a multiplication by a number gt six" in {
+    a [GreaterThanSixMultiplicationException] should be thrownBy {
+      permutedMultiples.by(7)
+    }
+  }
+
+  "The permuted multiples class" should "have a digit occurrences" in {
+    permutedMultiples.digitOccurrences("7","1234789732985") shouldEqual 2
+  } 
 }
