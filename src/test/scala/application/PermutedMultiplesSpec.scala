@@ -48,7 +48,11 @@ class PermutedMultiplesSpec extends FlatSpec with Matchers {
     permutedMultiples.digitSplit("17890251") shouldEqual Array("1","7","8","9","0","2","5","1")
   }
 
+  "The permuted multiples class" should "have a array string type" in {
+    assume(permutedMultiples.digitSplit("1234").isInstanceOf[Array[String]])
+  }
+
   "The permuted multiples class" should "have a digit array" in {
-    permutedMultiples.digitsArr shouldEqual Array(Array("1","2","3"),Array("1","7","8","9","0","2","5","1"))
+    permutedMultiples.digitsArr shouldEqual Array(Array("1","2","3"),Array("1","7","8","9","0","2","5","1"),Array("1","2","3","4"))
   }
 }
