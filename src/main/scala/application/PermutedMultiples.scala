@@ -5,6 +5,7 @@ class GreaterThanSixMultiplicationException extends Exception {}
 
 class PermutedMultiples extends Object with PermutedMultiplesDefinition {
   var digitsArr: Array[Array[String]] = Array.empty
+  var uniqueDigitsArr: Array[Array[String]] = Array.empty
 
   def digitOccurrences(dgt: String, dgtSeq: String): Int = {
     var occurrs: Int = 0
@@ -32,6 +33,7 @@ class PermutedMultiples extends Object with PermutedMultiplesDefinition {
         digits = digits :+ dgts(i).toString()
       }
     }
+    uniqueDigitsArr = uniqueDigitsArr :+ digits
     digits
   }
 }
