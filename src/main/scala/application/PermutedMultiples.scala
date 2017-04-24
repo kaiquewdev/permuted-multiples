@@ -24,6 +24,16 @@ class PermutedMultiples extends Object with PermutedMultiplesDefinition {
     digitsArr = digitsArr :+ digits
     digits
   }
+
+  def uniqueDigits(dgts: String): Array[String] = {
+    var digits: Array[String] = Array.empty
+    for (i <- (0 to dgts.length-1)) {
+      if (digits.indexOf(dgts(i).toString()) == -1) {
+        digits = digits :+ dgts(i).toString()
+      }
+    }
+    digits
+  }
 }
 
 trait PermutedMultiplesDefinition {

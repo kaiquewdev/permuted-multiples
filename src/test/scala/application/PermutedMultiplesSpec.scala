@@ -55,4 +55,8 @@ class PermutedMultiplesSpec extends FlatSpec with Matchers {
   "The permuted multiples class" should "have a digit array" in {
     permutedMultiples.digitsArr shouldEqual Array(Array("1","2","3"),Array("1","7","8","9","0","2","5","1"),Array("1","2","3","4"))
   }
+
+  "The permuted multiples class" should "have unique digits" in {
+    permutedMultiples.uniqueDigits("1111112222223333") shouldEqual Array("1","2","3")
+  } 
 }
