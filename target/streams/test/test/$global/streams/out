@@ -1,5 +1,5 @@
-[0m[[0mdebug[0m] [0mRunning TaskDef(application.PermutedMultiplesSpec, org.scalatest.tools.Framework$$anon$1@60c067db, false, [SuiteSelector])[0m
-[0m[[0minfo[0m] [0m[36mRun completed in 645 milliseconds.[0m[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(application.PermutedMultiplesSpec, org.scalatest.tools.Framework$$anon$1@657b3634, false, [SuiteSelector])[0m
+[0m[[0minfo[0m] [0m[36mRun completed in 624 milliseconds.[0m[0m
 [0m[[0minfo[0m] [0m[36mTotal number of tests run: 13[0m[0m
 [0m[[0minfo[0m] [0m[36mSuites: completed 1, aborted 0[0m[0m
 [0m[[0minfo[0m] [0m[36mTests: succeeded 13, failed 0, canceled 0, ignored 0, pending 0[0m[0m
