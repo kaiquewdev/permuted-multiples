@@ -42,4 +42,8 @@ class PermutedMultiplesSpec extends FlatSpec with Matchers {
     permutedMultiples.digitOccurrences("3","1234789732985") shouldEqual 2
     permutedMultiples.digitOccurrences("2","1231234878984123") shouldEqual 3
   } 
+
+  "The permuted multiples class" should "have a digit split" in {
+    permutedMultiples.digitSplit("123") shouldEqual Array("1","2","3")
+  }
 }
