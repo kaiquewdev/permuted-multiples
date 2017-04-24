@@ -36,6 +36,15 @@ class PermutedMultiples extends Object with PermutedMultiplesDefinition {
     uniqueDigitsArr = uniqueDigitsArr :+ digits
     digits
   }
+
+  def digitsOccurrences(dgtSeq: String): Array[Int] = {
+    var uniqueDigitsLocal: Array[String] = uniqueDigits(dgtSeq)
+    var occurrs: Array[Int] = Array.empty
+    for (i <- (0 to uniqueDigitsLocal.length-1)) {
+      occurrs = occurrs :+ digitOccurrences(uniqueDigitsLocal(i),dgtSeq)
+    }
+    occurrs
+  }
 }
 
 trait PermutedMultiplesDefinition {
