@@ -65,7 +65,15 @@ class PermutedMultiplesSpec extends FlatSpec with Matchers {
     permutedMultiples.uniqueDigitsArr shouldEqual Array(Array("1","2","3"),Array("1","0","2","5","3"))
   }
 
-  "The permuted multiples class" should "digits occurrences" in {
+  "The permuted multiples class" should "have digits occurrences" in {
     permutedMultiples.digitsOccurrences("1234789732985") shouldEqual Array(1,2,2,1,2,2,2,1)
   }
+
+  "The permuted multiples class" should "have digits occurrences type of array of ints" in {
+    assume(permutedMultiples.digitsOccurrences("14778349165328").isInstanceOf[Array[Int]])
+  }
+
+  //"The permuted multiples class" should "have digits six occurrences" in {
+  //  permutedMultiples.digitsSixOccurences(125874) shouldEqual 
+  //}
 }
