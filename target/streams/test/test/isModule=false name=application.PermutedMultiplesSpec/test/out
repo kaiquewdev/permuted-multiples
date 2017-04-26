@@ -16,11 +16,15 @@
 [0m[[0minfo[0m] [0m[32mThe permuted multiples class[0m[0m
 [0m[[0minfo[0m] [0m[32m- should have a digit occurrences[0m[0m
 [0m[[0minfo[0m] [0m[32mThe permuted multiples class[0m[0m
+[0m[[0minfo[0m] [0m[32m- should have a digit occurrences type of int[0m[0m
+[0m[[0minfo[0m] [0m[32mThe permuted multiples class[0m[0m
 [0m[[0minfo[0m] [0m[32m- should have a digit split[0m[0m
 [0m[[0minfo[0m] [0m[32mThe permuted multiples class[0m[0m
 [0m[[0minfo[0m] [0m[32m- should have a array string type[0m[0m
 [0m[[0minfo[0m] [0m[32mThe permuted multiples class[0m[0m
 [0m[[0minfo[0m] [0m[32m- should have a digit array[0m[0m
+[0m[[0minfo[0m] [0m[32mThe permuted multiples class[0m[0m
+[0m[[0minfo[0m] [0m[32m- should have a digit array type of 2-depth for string array[0m[0m
 [0m[[0minfo[0m] [0m[32mThe permuted multiples class[0m[0m
 [0m[[0minfo[0m] [0m[32m- should have unique digits[0m[0m
 [0m[[0minfo[0m] [0m[32mThe permuted multiples class[0m[0m

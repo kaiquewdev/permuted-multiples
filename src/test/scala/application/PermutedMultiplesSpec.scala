@@ -43,6 +43,10 @@ class PermutedMultiplesSpec extends FlatSpec with Matchers {
     permutedMultiples.digitOccurrences("2","1231234878984123") shouldEqual 3
   } 
 
+  "The permuted multiples class" should "have a digit occurrences type of int" in {
+    assume(permutedMultiples.digitOccurrences("3","123123123").isInstanceOf[Int])
+  }
+
   "The permuted multiples class" should "have a digit split" in {
     permutedMultiples.digitSplit("123") shouldEqual Array("1","2","3")
     permutedMultiples.digitSplit("17890251") shouldEqual Array("1","7","8","9","0","2","5","1")
@@ -55,6 +59,10 @@ class PermutedMultiplesSpec extends FlatSpec with Matchers {
   "The permuted multiples class" should "have a digit array" in {
     permutedMultiples.digitsArr shouldEqual Array(Array("1","2","3"),Array("1","7","8","9","0","2","5","1"),Array("1","2","3","4"))
   }
+
+  "The permuted multiples class" should "have a digit array type of 2-depth for string array" in {
+    assume(permutedMultiples.digitsArr.isInstanceOf[Array[Array[String]]])
+  } 
 
   "The permuted multiples class" should "have unique digits" in {
     permutedMultiples.uniqueDigits("1111112222223333") shouldEqual Array("1","2","3")
