@@ -85,6 +85,16 @@ class PermutedMultiplesSpec extends FlatSpec with Matchers {
     assume(permutedMultiples.digitsOccurrences("14778349165328").isInstanceOf[Array[Int]])
   }
 
+  "The permuted multiples class" should "have paird digits occurrences" in {
+    val sequence = "1055"
+    permutedMultiples.setX(1055)
+    permutedMultiples.pairdDigitsOccurrences(sequence)(sequence) shouldEqual Array(1,1,2)
+    for (i <- (2 to 6)) {
+      permutedMultiples
+        .pairdDigitsOccurrences(sequence)(permutedMultiples.by(i).toString()) shouldEqual permutedMultiples.digitsOccurrences(permutedMultiples.by(i).toString())
+    }
+  }
+
   //"The permuted multiples class" should "have digits six occurrences" in {
   //  permutedMultiples.digitsSixOccurences(125874) shouldEqual 
   //}

@@ -45,6 +45,15 @@ class PermutedMultiples extends Object with PermutedMultiplesDefinition {
     }
     occurrs
   }
+
+  def pairdDigitsOccurrences(dgtSeq: String): Map[String,Array[Int]] = {
+    var multiples: Map[String,Array[Int]] = Map(dgtSeq -> digitsOccurrences(dgtSeq))
+    setX(dgtSeq.toInt)
+    for (i <- (2 to 6)) {
+      multiples += (by(i).toString() -> digitsOccurrences(by(i).toString()))
+    }
+    multiples
+  }
 }
 
 trait PermutedMultiplesDefinition {
