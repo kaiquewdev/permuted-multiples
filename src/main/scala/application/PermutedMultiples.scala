@@ -56,6 +56,14 @@ class PermutedMultiples extends Object with PermutedMultiplesDefinition {
   }
 }
 
+object PermutedMultiplesExplanation extends App {
+  println("Permuted Multiples Explanation")
+  val permutedMultiples = new PermutedMultiples()
+  val sequence = "1001"
+  permutedMultiples.setX(1001)
+  println(permutedMultiples.getX() + ": " + permutedMultiples.pairdDigitsOccurrences(sequence)(sequence).map(v => v.toString()).reduce((r,l) => r + "-" + l))
+}
+
 trait PermutedMultiplesDefinition {
   var x: Int = 10
   def setX(v: Int): Int = {
